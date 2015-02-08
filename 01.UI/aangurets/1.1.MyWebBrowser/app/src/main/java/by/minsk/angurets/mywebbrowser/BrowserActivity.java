@@ -1,4 +1,4 @@
-package angurets.minsk.by.mywebbrowser;
+package by.minsk.angurets.mywebbrowser;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -16,6 +16,7 @@ public class BrowserActivity extends Activity {
     private WebView mWebView;
     private Button mBackButton;
     private Button mForwardButton;
+    public static final String ADRESS = "adress";
 
 
     @Override
@@ -37,7 +38,7 @@ public class BrowserActivity extends Activity {
             }
         }
 
-        String mAdress = getIntent().getStringExtra("adress");
+        String mAdress = getIntent().getStringExtra(ADRESS);
         mWebView.setWebViewClient(new MyWebViewClient());
         mWebView.loadUrl(mAdress);
 

@@ -15,7 +15,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"/>
 
     <EditText
-        android:id="@+id/adress"
+        android:id="@+id/entered_adress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textUri"

@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/adress"
+        android:layout_below="@+id/entered_adress"
         android:onClick="moveOnBack"
         android:text="@string/back"/>
 
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/adress"
+        android:layout_below="@+id/entered_adress"
         android:onClick="goForward"
         android:text="@string/forward"
         />

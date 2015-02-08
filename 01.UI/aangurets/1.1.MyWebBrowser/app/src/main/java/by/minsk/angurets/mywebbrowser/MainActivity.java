@@ -1,4 +1,4 @@
-package angurets.minsk.by.mywebbrowser;
+package by.minsk.angurets.mywebbrowser;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -14,18 +14,19 @@ import android.widget.Toast;
 public class MainActivity extends Activity {
 
     private EditText mAdress;
+    public static final String ADRESS = "adress";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_layout);
 
-        mAdress = (EditText) findViewById(R.id.adress);
+        mAdress = (EditText) findViewById(R.id.entered_adress);
     }
 
     public void goTo(View view) {
-        Intent intent = new Intent(getApplicationContext(), BrowserActivity.class);
-        intent.putExtra("adress", mAdress.getText().toString());
+        Intent intent = new Intent(this, BrowserActivity.class);
+        intent.putExtra(ADRESS, mAdress.getText().toString());
         startActivity(intent);
         onShow(view);
     }

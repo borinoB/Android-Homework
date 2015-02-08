@@ -15,7 +15,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"/>
 
     <EditText
-        android:id="@+id/adress"
+        android:id="@+id/entered_adress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textUri"
@@ -28,7 +28,7 @@
         android:id="@+id/go_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/adress"
+        android:layout_below="@+id/entered_adress"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
         android:onClick="goTo"

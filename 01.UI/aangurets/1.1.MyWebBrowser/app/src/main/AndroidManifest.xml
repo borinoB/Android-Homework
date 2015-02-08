@@ -1,5 +1,5 @@
 <manifest
-    package="angurets.minsk.by.mywebbrowser"
+    package="by.minsk.angurets.mywebbrowser"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name="angurets.minsk.by.mywebbrowser.MainActivity"
+            android:name="by.minsk.angurets.mywebbrowser.MainActivity"
             android:label="@string/app_name"
             >
             <intent-filter>
@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="angurets.minsk.by.mywebbrowser.BrowserActivity"
+            android:name="by.minsk.angurets.mywebbrowser.BrowserActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
