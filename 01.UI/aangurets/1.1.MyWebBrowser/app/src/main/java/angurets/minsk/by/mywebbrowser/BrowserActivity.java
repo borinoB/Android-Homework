@@ -27,6 +27,7 @@ public class BrowserActivity extends Activity {
         mWebView = (WebView) findViewById(R.id.webView);
         mBackButton = (Button) findViewById(R.id.back_button);
         mForwardButton = (Button) findViewById(R.id.forward_button);
+        mWebView.getSettings().setJavaScriptEnabled(true);
 
         class MyWebViewClient extends WebViewClient {
             @Override
