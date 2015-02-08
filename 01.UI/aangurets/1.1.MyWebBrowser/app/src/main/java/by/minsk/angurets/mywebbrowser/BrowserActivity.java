@@ -6,16 +6,17 @@ import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 /**
  * Created by aangurets on 07.02.2015.
  */
-public class BrowserActivity extends Activity {
+public class BrowserActivity extends Activity implements View.OnClickListener {
 
     private WebView mWebView;
-    private Button mBackButton;
-    private Button mForwardButton;
+    private ImageButton mBackButton;
+    private ImageButton mForwardButton;
     public static final String ADRESS = "adress";
 
 
@@ -26,42 +27,18 @@ public class BrowserActivity extends Activity {
         setContentView(R.layout.browser_layout);
 
         mWebView = (WebView) findViewById(R.id.webView);
-        mBackButton = (Button) findViewById(R.id.back_button);
-        mForwardButton = (Button) findViewById(R.id.forward_button);
+        mBackButton = (ImageButton) findViewById(R.id.back_button);
+        mForwardButton = (ImageButton) findViewById(R.id.forward_button);
+        mBackButton.setOnClickListener(this);
+        mForwardButton.setOnClickListener(this);
+
         mWebView.getSettings().setJavaScriptEnabled(true);
 
-        class MyWebViewClient extends WebViewClient {
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                view.loadUrl(url);
-                return true;
-            }
-        }
-
         String mAdress = getIntent().getStringExtra(ADRESS);
-        mWebView.setWebViewClient(new MyWebViewClient());
+
+        mWebView.setWebViewClient(new WebViewClient());
         mWebView.loadUrl(mAdress);
 
-    }
-
-    public void moveOnBack(View view) {
-        if (mWebView.canGoBack()) {
-            mForwardButton.setEnabled(true);
-            mWebView.goBack();
-        } else {
-            mBackButton.setEnabled(false);
-            onShowCantBack(view);
-        }
-    }
-
-    public void goForward(View view) {
-        if (mWebView.canGoForward()) {
-            mBackButton.setEnabled(true);
-            mWebView.goForward();
-        } else {
-            mForwardButton.setEnabled(false);
-            onShowCantForward(view);
-        }
     }
 
     public void onShowCantBack(View view) {
@@ -77,4 +54,23 @@ public class BrowserActivity extends Activity {
         toast.show();
     }
 
+    @Override
+    public void onClick(View view) {
+        if (view == mBackButton) {
+            if (mWebView.canGoBack()) {
+                mWebView.goBack();
+            } else {
+                mBackButton.setEnabled(false);
+                onShowCantBack(view);
+            }
+        } else {
+            if (mWebView.canGoForward()) {
+                mWebView.goForward();
+            } else {
+                mForwardButton.setEnabled(false);
+                onShowCantForward(view);
+            }
+        }
+
+    }
 }

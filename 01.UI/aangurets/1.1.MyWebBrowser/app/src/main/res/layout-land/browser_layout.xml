@@ -4,25 +4,23 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-    <Button
+    <ImageButton
         android:id="@+id/back_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/entered_adress"
-        android:onClick="moveOnBack"
-        android:text="@string/back"/>
+        android:src="@drawable/back" />
 
-    <Button
+    <ImageButton
         android:id="@+id/forward_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="goForward"
-        android:text="@string/forward"
         android:layout_alignBottom="@+id/webView"
         android:layout_toLeftOf="@+id/webView"
-        android:layout_toStartOf="@+id/webView"/>
+        android:layout_toStartOf="@+id/webView"
+        android:src="@drawable/forward"/>
 
     <WebView
         android:id="@+id/webView"

@@ -19,8 +19,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textUri"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
+        android:paddingLeft="@dimen/padding"
+        android:paddingRight="@dimen/padding"
         android:text="@string/http"
         />
 
@@ -28,9 +28,8 @@
         android:id="@+id/go_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:onClick="goTo"
-        android:text="@string/go"/>
+        android:text="@string/go"
+        android:layout_gravity="center_horizontal"/>
 
 
 </LinearLayout>

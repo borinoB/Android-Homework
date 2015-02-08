@@ -1,8 +1,6 @@
 <resources>
     <string name="app_name">MyWebBrowser</string>
     <string name="go">Go!</string>
-    <string name="back">Back</string>
-    <string name="forward">Forward</string>
     <string name="http">http://</string>
     <string name="show">proceed...</string>
     <string name="show_back">I can not go back, sorry</string>
