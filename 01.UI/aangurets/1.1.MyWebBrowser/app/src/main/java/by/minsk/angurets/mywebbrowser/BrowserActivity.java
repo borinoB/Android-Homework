@@ -42,15 +42,13 @@ public class BrowserActivity extends Activity implements View.OnClickListener {
     }
 
     public void onShowCantBack(View view) {
-        Toast toast = Toast.makeText(
-                getApplicationContext(), R.string.show_back, Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(this, R.string.show_back, Toast.LENGTH_SHORT);
         toast.show();
 
     }
 
     public void onShowCantForward(View view) {
-        Toast toast = Toast.makeText(
-                getApplicationContext(), R.string.show_forward, Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(this, R.string.show_forward, Toast.LENGTH_SHORT);
         toast.show();
     }
 

@@ -31,7 +31,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     }
 
     public void onShow(View view) {
-        Toast toast = Toast.makeText(getApplicationContext(), R.string.show, Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(this, R.string.show, Toast.LENGTH_SHORT);
         toast.show();
     }
 

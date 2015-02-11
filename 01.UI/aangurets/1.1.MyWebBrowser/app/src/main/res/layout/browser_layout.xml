@@ -40,6 +40,6 @@
         android:id="@+id/imageView"
         android:layout_alignBottom="@+id/forward_button"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/Logo"/>
+        android:src="@drawable/logo"/>
 
 </RelativeLayout>
