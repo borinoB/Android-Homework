@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name="by.minsk.angurets.mywebbrowser.MainActivity"
+            android:name=".BrowserActivity"
             android:label="@string/app_name"
             >
             <intent-filter>
@@ -19,14 +19,9 @@
                 <data android:scheme="http"/>
             </intent-filter>
         </activity>
-        <activity
-            android:name="by.minsk.angurets.mywebbrowser.BrowserActivity"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
+            <activity
+               android:name=".HistoryActivity"
+               android:label="@string/app_name"/>
     </application>
 
 </manifest>

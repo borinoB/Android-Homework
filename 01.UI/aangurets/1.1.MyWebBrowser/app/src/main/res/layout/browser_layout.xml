@@ -5,41 +5,62 @@
                 android:orientation="vertical">
 
     <ImageButton
+        android:id="@+id/open_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/uri"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_action_go"/>
+
+    <ImageButton
+        android:id="@+id/history_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/uri"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_action_history"/>
+
+    <ImageButton
         android:id="@+id/back_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/entered_adress"
-        android:src="@drawable/back"/>
+        android:layout_below="@+id/uri"
+        android:layout_toLeftOf="@+id/history_button"
+        android:layout_toStartOf="@+id/history_button"
+        android:src="@drawable/ic_action_back"/>
 
     <ImageButton
         android:id="@+id/forward_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/entered_adress"
-        android:src="@drawable/forward"
-        />
+        android:layout_below="@+id/uri"
+        android:layout_toEndOf="@+id/history_button"
+        android:layout_toRightOf="@+id/history_button"
+        android:src="@drawable/ic_action_forward"/>
+
 
     <WebView
         android:id="@+id/webView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/forward_button"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/forward_button"
         android:layout_below="@+id/back_button"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/uri"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:layout_alignBottom="@+id/forward_button"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/logo"/>
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/open_button"
+        android:layout_toStartOf="@+id/open_button"
+        android:inputType="textUri"/>
 
 </RelativeLayout>
