@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">МойБраузер</string>
+    <string name="ERROR_PLEASE_ENTER_URL">Пожалуйста введите урл адрес</string>
+    <string name="button_history">ист</string>
+    <string name="button_go_url">ок</string>
+    <!--<string name="button_history_back">назад</string>-->
+    <!--<string name="button_history_forward">вперед</string>-->
+</resources>

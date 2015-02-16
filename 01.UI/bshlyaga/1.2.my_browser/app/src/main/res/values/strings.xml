@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MyWebBrowser</string>
+    <string name="ERROR_PLEASE_ENTER_URL">Please enter URL</string>
+
+    <string name="INT_STEP" translatable="false">INT_STEP</string>
+    <string name="button_history">hist</string>
+    <string name="button_go_url">go</string>
+    <string name="button_history_back">&lt;--</string>
+    <string name="button_history_forward">--&gt;</string>
+    <!--<string name="button_history_back">back</string>-->
+    <!--<string name="button_history_forward">forward</string>-->
+    <string name="CURRENT_POSITION" translatable="false">CURRENT_POSITION</string>
+</resources>
